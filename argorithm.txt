@@ -5,3 +5,20 @@
 // 5. check if the user won
 // 6. give the user their money
 // 7. play again
+
+
+//-----------------------------------------------------------
+settting up a node directory
+//-----------------------------------------
+in the terminal initialise by typing
+// 1. npm init
+// 2. press enter or fill the fields omwe abwere
+
+// now install the packages needed ----------
+//----- install prompt sync package to accept user input
+// in the terminal type
+// npm i prompt-sync
+
+//-----boom you are ready to go-------------
+
+//-----------------------------------------------------------
