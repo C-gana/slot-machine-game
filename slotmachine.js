@@ -28,8 +28,19 @@ function getNumberOfLines() {
     }
   }
 }
-const depositAmount = deposit();
+
+// a funtion to get bet amount for each line
+function getBetAmount(balance, lines) {
+  while (true) {
+    const bet = prompt("Enter bet amount for each line: ");
+    const userBet = parseFloat(bet);
+    if (isNaN(userBet) || userBet <= 0 || userBet > balance / lines) {
+      console.log("Please enter a valid number");
+    } else {
+      return userBet;
+    }
+  }
+}
+let balance = deposit();
 const lines = getNumberOfLines();
-console.log(
-  `You have deposited: $${depositAmount}\nYou are betting on ${lines} lines`
-);
+const bet = getBetAmount(balance, lines);
