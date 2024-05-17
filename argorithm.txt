@@ -22,3 +22,5 @@ in the terminal initialise by typing
 //-----boom you are ready to go-------------
 
 //-----------------------------------------------------------
+//----------- To spin the slot machine ---------------------
+// 1. declare constants e.g number of rows, columns ,symbols and symbol values
