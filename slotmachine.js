@@ -17,6 +17,17 @@ const SYMBOL_VALUES = {
   D: 2,
 };
 
+// a spin function to spin the slot machine
+function spin() {
+  const symbols = [];
+  for (const [symbol, count] of Object.entries(SYMBOLS_COUNT)) {
+    for (let i = 0; i < count; i++) {
+      symbols.push(symbol);
+    }
+  }
+}
+
+spin();
 // a function to allow user deposit money to play slot machine
 function deposit() {
   while (true) {
