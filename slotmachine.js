@@ -25,9 +25,23 @@ function spin() {
       symbols.push(symbol);
     }
   }
+
+  const reels = [[], [], []];
+
+  for (let i = 0; i < COLS; i++) {
+    const reelSymbols = [...symbols]; // copying the contents of symbols to avoid overwriting it
+    for (j = 0; j < ROWS; j++) {
+      //generating a random number and then multiplying it with reelsymbols length to get a random index
+      const randomIndex = Math.floor(Math.random() * reelSymbols.length);
+      const selectedSymbols = reelSymbols[randomIndex];
+      reels[i].push(selectedSymbols);
+      reelSymbols.splice(randomIndex, 1);
+    }
+  }
+
+  return reels;
 }
 
-spin();
 // a function to allow user deposit money to play slot machine
 function deposit() {
   while (true) {
@@ -68,6 +82,8 @@ function getBetAmount(balance, lines) {
     }
   }
 }
+let reelsResult = spin();
+console.log(reelsResult);
 let balance = deposit();
 const lines = getNumberOfLines();
 const bet = getBetAmount(balance, lines);
